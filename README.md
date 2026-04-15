@@ -1,6 +1,7 @@
 # cyphera-streamsets
 
 [![CI](https://github.com/cyphera-labs/cyphera-streamsets/actions/workflows/ci.yml/badge.svg)](https://github.com/cyphera-labs/cyphera-streamsets/actions/workflows/ci.yml)
+[![Security](https://github.com/cyphera-labs/cyphera-streamsets/actions/workflows/codeql.yml/badge.svg)](https://github.com/cyphera-labs/cyphera-streamsets/actions/workflows/codeql.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
 Format-preserving encryption for [StreamSets](https://streamsets.org/) — StreamSets Processor powered by Cyphera.
