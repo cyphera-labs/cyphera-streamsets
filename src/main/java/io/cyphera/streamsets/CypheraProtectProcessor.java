@@ -20,12 +20,12 @@ import java.util.Map;
 public class CypheraProtectProcessor {
 
     private final Cyphera client;
-    private final String policyName;
+    private final String configurationName;
     private final String fieldPath;
 
-    public CypheraProtectProcessor(String policyName, String fieldPath) {
+    public CypheraProtectProcessor(String configurationName, String fieldPath) {
         this.client = CypheraLoader.getInstance();
-        this.policyName = policyName;
+        this.configurationName = configurationName;
         this.fieldPath = fieldPath;
     }
 
@@ -37,14 +37,14 @@ public class CypheraProtectProcessor {
     public String protect(String value) {
         if (value == null) return null;
         try {
-            return client.protect(value, policyName);
+            return client.protect(value, configurationName);
         } catch (Exception e) {
             return "[error: " + e.getMessage() + "]";
         }
     }
 
     /**
-     * Access (decrypt) a protected value using the embedded tag.
+     * Access (decrypt) a protected value using the embedded header.
      */
     public static String access(String protectedValue) {
         if (protectedValue == null) return null;
